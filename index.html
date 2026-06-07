@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors AI</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <!-- Load Teachable Machine Image Model -->
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+            <p>Play against the computer using your webcam!</p>
+        </header>
+        
+        <div class="game-area">
+            <div class="player-side">
+                <h2>You</h2>
+                <div id="webcam-container" class="video-container">
+                    <div class="loader" id="loader">Loading Model...</div>
+                </div>
+                <div class="prediction-box">
+                    <span id="label-container">Waiting...</span>
+                </div>
+            </div>
+
+            <div class="vs-badge">VS</div>
+
+            <div class="computer-side">
+                <h2>Computer</h2>
+                <div class="computer-move-container">
+                    <span id="computer-move">❓</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="play-btn" disabled>Play Round</button>
+        </div>
+
+        <div class="result-area">
+            <h2 id="result-text">Get ready!</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
